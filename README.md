@@ -5,18 +5,53 @@
 (\* Equal contribution, † Corresponding author)  
 **CVPR 2023**  
 
-**[Paper](https://github.com/ispc-lab/NeuralPCI) | [Project Page](https://github.com/ispc-lab/NeuralPCI)**  
+**[Paper](https://github.com/ispc-lab/NeuralPCI) | [Project Page](https://dyfcalid.github.io/NeuralPCI)**  
+
+<img src="img\demo_indoor.gif" width=35%>&nbsp;
+<img src="img\demo_outdoor.gif" width=50%>
+
+<!-- TABLE OF CONTENTS -->
+<details open="open" style='padding: 10px; border-radius:5px 30px 30px 5px; border-style: solid; border-width: 1px;'>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#changelog">Changelog</a>
+    </li>
+    <li>
+      <a href="#get-started">Get Started</a>
+    </li>
+    <li>
+      <a href="#introduction">Introduction</a>
+    </li>
+    <li>
+      <a href="#benchmark">Benchmark</a>
+    </li>
+    <li>
+      <a href="#visualization">Visualization</a>
+    </li>
+    <li>
+      <a href="#citation">Citation</a>
+    </li>
+    <li>
+      <a href="#license">License</a>
+    </li>
+  </ol>
+</details>
+
+## Changelog  
+2023-3-27: We post the preprint paper on arXiv and release the project page.  
+2023-2-28: This paper is accepted by **CVPR 2023** 🎉🎉.  
 
 ## Introduction
 
 This repository is the PyTorch implementation for **NeuralPCI**.  
 
+<img src="img\overview.jpg" width=85%>
+
 NeuralPCI is an end-to-end 4D spatio-temporal Neural field for 3D Point Cloud Interpolation, which implicitly integrates multi-frame information to handle nonlinear large
 motions for both indoor and outdoor scenarios.
 
-## Changelog  
-<!-- 2023-3-27: We released the code of NeuralPCI. -->  
-2023-2-27: This paper is accepted by **CVPR 2023** 🎉🎉.  
+
 
 ## Get Started
 **[COMING SOON]** 🚧 We are preparing for the release of the codes and datasets asap.
@@ -25,11 +60,20 @@ motions for both indoor and outdoor scenarios.
 ## Dataset
 
 ### NL-Drive
+<img src="img/NL_Drive.jpg" width=50%>  
 
+Download link: [To be released]
+  
 ### DHB
+  Download link: [[Google Drive]](https://drive.google.com/drive/folders/1Oaras1mV6DOICMPkCggPZvnBAtc4SKgH?usp=sharing)
 
 ## Benchmark  
   
+
+## Visualization
+<img src="img/DHB_vis.jpg" width=80%>
+  
+<img src="img/NL_Drive_vis.jpg" width=80%>
   
 ## Citation
 
