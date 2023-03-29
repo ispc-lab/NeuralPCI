@@ -7,8 +7,21 @@
 
 **[[Paper]](https://arxiv.org/abs/2303.15126) | [[Project Page]](https://dyfcalid.github.io/NeuralPCI)**  
 
-<img src="img\demo_indoor.gif" width=35%>&nbsp;
-<img src="img\demo_outdoor.gif" width=50%>
+<!-- <div>
+<video autoplay loop muted playsinline width="21%" >
+  <source src="img\demo_indoor_1.mp4" type="video/mp4">
+</video>&nbsp;
+<video autoplay loop muted playsinline width="60%" >
+  <source src="img\demo_outdoor_1.mp4" type="video/mp4">
+</video> -->
+
+<video autoplay loop muted playsinline width="21%" >
+  <source src="https://user-images.githubusercontent.com/51731102/228475246-e0f2d3c8-adad-41d5-a474-c05a2945cb20.mp4" type="video/mp4">
+</video>&nbsp;
+<video autoplay loop muted playsinline width="60%" >
+  <source src="https://user-images.githubusercontent.com/51731102/228474998-37c81904-061b-4b35-b70e-465c94a93ed8.mp4" type="video/mp4">
+</video>
+
 
 <!-- TABLE OF CONTENTS -->
 <details open="open" style='padding: 10px; border-radius:5px 30px 30px 5px; border-style: solid; border-width: 1px;'>
@@ -48,7 +61,7 @@ This repository is the PyTorch implementation for **NeuralPCI**.
    
 NeuralPCI is an end-to-end 4D spatio-temporal Neural field for 3D Point Cloud Interpolation, which implicitly integrates multi-frame information to handle nonlinear large motions for both indoor and outdoor scenarios.
   
-<img src="img\overview.jpg" width=85%>
+<img src="img\overview.png" width=85%>
   
 The 4D neural field is constructed by encoding the spatio-temporal coordinates of the multi-frame input point clouds via a coordinate-based multi-layer perceptron network. For each point cloud frame of the input, the interpolation time is set to the corresponding timestamps of four input frames for NeuralPCI to generate the corresponding point cloud. And then the neural field is optimized on runtime in a self-supervised manner without relying on ground truth. In the inference stage after optimization, NeuralPCI receives a reference point cloud and an arbitrary interpolation frame moment as input to generate the point cloud of the associated spatio-temporal location.
 
@@ -61,7 +74,7 @@ The 4D neural field is constructed by encoding the spatio-temporal coordinates o
 ## Dataset
 
 ### NL-Drive
-<img src="img/NL_Drive.jpg" width=50%>  
+<img src="img/NL_Drive.png" width=50%>  
 
 Download link: [To be released]
   
@@ -72,9 +85,9 @@ Download link: [To be released]
   
 
 ## Visualization
-<img src="img/DHB_vis.jpg" width=80%>
+<img src="img/DHB_vis.png" width=80%>
   
-<img src="img/NL_Drive_vis.jpg" width=80%>
+<img src="img/NL_Drive_vis.png" width=80%>
   
 ## Citation
 
