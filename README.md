@@ -7,20 +7,10 @@
 
 **[[Paper]](https://arxiv.org/abs/2303.15126) | [[Project Page]](https://dyfcalid.github.io/NeuralPCI)**  
 
-<!-- <div>
-<video autoplay loop muted playsinline width="21%" >
-  <source src="img\demo_indoor_1.mp4" type="video/mp4">
-</video>&nbsp;
-<video autoplay loop muted playsinline width="60%" >
-  <source src="img\demo_outdoor_1.mp4" type="video/mp4">
-</video> -->
 
-<video autoplay loop muted playsinline width="21%" >
-  <source src="https://user-images.githubusercontent.com/51731102/228475246-e0f2d3c8-adad-41d5-a474-c05a2945cb20.mp4" type="video/mp4">
-</video>&nbsp;
-<video autoplay loop muted playsinline width="60%" >
-  <source src="https://user-images.githubusercontent.com/51731102/228474998-37c81904-061b-4b35-b70e-465c94a93ed8.mp4" type="video/mp4">
-</video>
+| Indoor Scenario  | Outdoor Scenario |
+| ------------- | ------------- |
+| <video src="https://user-images.githubusercontent.com/51731102/228475246-e0f2d3c8-adad-41d5-a474-c05a2945cb20.mp4">  | <video src="https://user-images.githubusercontent.com/51731102/228474998-37c81904-061b-4b35-b70e-465c94a93ed8.mp4">|
 
 
 <!-- TABLE OF CONTENTS -->
