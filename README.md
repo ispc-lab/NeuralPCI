@@ -31,6 +31,9 @@
       <a href="#introduction">Introduction</a>
     </li>
     <li>
+      <a href="#dataset">Dataset</a>
+    </li>
+    <li>
       <a href="#benchmark">Benchmark</a>
     </li>
     <li>
@@ -39,9 +42,9 @@
     <li>
       <a href="#citation">Citation</a>
     </li>
-    <li>
+    <!-- <li>
       <a href="#acknowledgements">Acknowledgements</a>
-    </li>
+    </li> -->
     <li>
       <a href="#license">License</a>
     </li>
@@ -50,7 +53,7 @@
 
 
 ## Changelog  
-2023-5-21: We release the code of NeuralPCI along with the NL-Drive dataset.  
+2023-5-21: ✨ We release the code of NeuralPCI along with the NL-Drive dataset.  
 2023-3-27: We post the preprint paper on arXiv and release the project page.  
 2023-2-28: This paper is accepted by **CVPR 2023** 🎉🎉.  
 
@@ -67,7 +70,8 @@ The 4D neural field is constructed by encoding the spatio-temporal coordinates o
 
 
 ## Get Started
-Please follow installation instructions to setup the environment.  
+### Installation
+Please follow instructions to setup the environment.  
 ```
 git clone https://github.com/ispc-lab/NeuralPCI.git
 cd ./NeuralPCI/
@@ -101,12 +105,33 @@ cd ../pointnet2/
 python setup.py install
 ```
 
+### Run NeuralPCI
+Refer to [Dataset](#dataset) for data downloading first.  
+Create a soft link to the dataset folder for DHB and NL-Drive.  
+```
+ln -s /PATH/TO/DHB ./data/DHB-dataset
+ln -s /PATH/TO/NL_Drive ./data/NL_Drive
+``` 
+
+Make sure you are in the root directory of this repo.  
+
+For DHB dataset, run
+```
+bash run_DHB.sh
+```
+
+For NL-Drive dataset, run
+```
+bash run_NL_Drive.sh
+```
+
+
 ## Dataset
 
 ### NL-Drive
 <img src="img/NL_Drive.png" width=50%>  
 
-Download link: [[OneDrive] ](https://tongjieducn-my.sharepoint.com/:f:/g/personal/zhengzehan_tongji_edu_cn/Ej4AiwgJWp1MsAFwtWcxIFkBPDwsCW_3bWSRlpYf4XZw-w) 
+Download link: [[OneDrive] ](https://tongjieducn-my.sharepoint.com/:f:/g/personal/zhengzehan_tongji_edu_cn/Ej4AiwgJWp1MsAFwtWcxIFkBPDwsCW_3bWSRlpYf4XZw-w) [[Google Drive (testset only)]](https://drive.google.com/file/d/1K3RftGU7UHwmX33NfHLSOgFQ3XkCbJat/view?usp=sharing)
 
 NL-Drive dataset is a challenging multi-frame interpolation dataset for autonomous driving scenarios. Based on the principle of hard-sample selection and the diversity of scenarios, NL-Drive dataset contains point cloud sequences with large nonlinear movements from three public large-scale autonomous driving datasets: KITTI, Argoverse and Nuscenes.  
 
@@ -122,7 +147,43 @@ Dynamic Human Bodies dataset (DHB), containing 10 point cloud sequences from the
 
 
 ## Benchmark  
+  - DHB Dataset Results (**Chamfer Distance**)
+  
+| Method     | Longdress | Loot | Red&Black | Soldier | Squat | Swing | Overall ↓|
+| :----:     |:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+| IDEA-Net | 0.89 | 0.86 | 0.94 | 1.63 | 0.62 | 1.24 | 1.02 |
+| PointINet | 0.98 | 0.85 | 0.87 | 0.97 | 0.90 | 1.45 | 0.96 | 
+| NSFP | 1.04 | 0.81 | 0.97 | 0.68 | 1.14 | 3.09 | 1.22 | 
+| PV-RAFT | 1.03 | 0.82 | 0.94 | 0.91 | 0.57 | 1.42 | 0.92 | 
+|**NeuralPCI (Ours)** | **0.70** |**0.61**|**0.67**|**0.59**|**0.03**|**0.53**|**0.54**|  
 
+  - DHB Dataset Results (**Earth Mover's Distance**)
+  
+| Method     | Longdress | Loot | Red&Black | Soldier | Squat | Swing | Overall ↓|
+| :----:     |:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+| IDEA-Net | 6.01 | 8.62 | 10.34 | 30.07 | 6.68 | 6.93 | 12.03 |
+| PointINet | 10.87| 12.10 | 10.68 | 12.39 | 13.99 | 14.81 | 12.25 | 
+| NSFP | 7.45 | 7.13 | 8.14 | 5.25 | 7.97 | 11.39 | 7.81 |
+| PV-RAFT | 6.88 | 5.99 | 7.03 | 5.31 | 2.81 | 10.54 | 6.14 | 
+|**NeuralPCI (Ours)** | **4.36** |**4.76**|**4.79**|**4.63**|**0.02**|**2.22**|**3.68**|  
+
+  - NL-Drive Dataset Results (**Chamfer Distance**)  
+
+| Method     | Frame-1 | Frame-2 | Frame-3 | Average ↓ |  
+| :----:     |:----:|:----:|:----:|:----:|
+| NSFP | 0.94 | 1.75 | 2.55 | 1.75 |  
+| PV-RAFT | 1.36 | 1.92 | 1.63 | 1.64 |  
+| PointINet | 0.93| 1.24 | 1.01 | 1.06 |  
+|**NeuralPCI (Ours)** | **0.72** |**0.94**|**0.74**|**0.80**|  
+
+  - NL-Drive Dataset Results (**Earth Mover's Distance**)  
+
+| Method     | Frame-1 | Frame-2 | Frame-3 | Average ↓ |  
+| :----:     |:----:|:----:|:----:|:----:|
+| NSFP | 95.18 | 132.30 | 168.91 | 132.13 |  
+| PV-RAFT | 104.57 | 146.87 | 169.82 | 140.42 |  
+| PointINet | 97.48 | **110.22** | 95.65 | 101.12 |  
+|**NeuralPCI (Ours)** | **89.03** | 113.45 |**88.61**|**97.03**| 
   
 
 ## Visualization
@@ -145,7 +206,7 @@ If you find our code or paper useful, please cite
 
   
 
-## Acknowledgements
+<!-- ## Acknowledgements -->
 
   
 
