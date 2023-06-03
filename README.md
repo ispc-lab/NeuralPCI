@@ -9,8 +9,8 @@
 (\* Equal contribution, † Corresponding author)  
 **CVPR 2023**  
 
-**[[Paper (arXiv)]](https://arxiv.org/abs/2303.15126) | [[Paper (CVPR)]](https://openaccess.thecvf.com/content/CVPR2023/html/Zheng_NeuralPCI_Spatio-Temporal_Neural_Field_for_3D_Point_Cloud_Multi-Frame_Non-Linear_CVPR_2023_paper.html) | [[Project Page]](https://dyfcalid.github.io/NeuralPCI)**  | [Video] | [Talk] | [Slides] | [Poster]    
-
+#### **[Paper (arXiv)](https://arxiv.org/abs/2303.15126) | [Paper (CVPR)](https://openaccess.thecvf.com/content/CVPR2023/html/Zheng_NeuralPCI_Spatio-Temporal_Neural_Field_for_3D_Point_Cloud_Multi-Frame_Non-Linear_CVPR_2023_paper.html) | [Project Page](https://dyfcalid.github.io/NeuralPCI)  | [Video (6min)](https://www.youtube.com/watch?v=KXPkEwBGzOI) | [Talk (15min, Chinese)](https://www.bilibili.com/video/BV1Ch4y1x75q?t=27896) | [Slides](https://drive.google.com/file/d/141G0mk4XubM4HFSyyXsCWZBuzXQ9PGO0/view?usp=sharing) | [Poster](https://drive.google.com/file/d/1sahMOrG32hRhqSxqoreW65U1DcSKCvgm/view?usp=sharing)**  
+  
 
 | Indoor Scenario  | Outdoor Scenario |
 | ------------- | ------------- |
